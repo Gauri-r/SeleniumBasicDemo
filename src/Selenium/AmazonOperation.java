@@ -15,6 +15,8 @@ public class AmazonOperation {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Destiny\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver WebObj=new ChromeDriver();
 		WebObj.navigate().to("https://www.gmail.com/");
+		
+		System.out.println("Gmail.com get opened");
 		WebObj.manage().window().maximize();
 		String title=WebObj.getTitle();
 		if (title.equalsIgnoreCase("gmail.com")) {
@@ -45,12 +47,14 @@ public class AmazonOperation {
 				//WebObj.findElement(By.xpath("//*[@id=\"yDmH0d\"]")).click();
 				
 				WebObj.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-				
+				System.out.println("Implicit Wait applied");
 				WebElement WebEle2=WebObj.findElement(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input"));
-				WebEle2.sendKeys("shobha");
+				WebEle2.sendKeys("gauri");
 				
 				WebElement WebEle3=WebObj.findElement(By.cssSelector("#passwordNext > span > span"));
 				WebEle3.click();
+				
+				System.out.println("Tried Logging in");
 				//WebObj.get("www.amazon.in");
 				
 				//WebObj.manage().window().maximize();
