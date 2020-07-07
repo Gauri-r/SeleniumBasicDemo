@@ -26,8 +26,11 @@ public class FacebookXpath {
 		System.out.println(WebChrome.findElement(By.cssSelector("#globalContainer > div.uiContextualLayerPositioner._572t.uiLayer > div > div > div > a")).getText());
 		
 		 
+		System.out.println("Facebook Opened Successfully");
+		System.out.println("Facebook Operation Successful");
+		System.out.println("Getting Started with Facebook");
 		
-
+		
 	}
 
 }
