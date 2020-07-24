@@ -14,6 +14,8 @@ public class AmazonOp {
 		
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.in/");
+		System.out.println("Amazon Page is fetched");
+	
 		driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[2]")).click();
 		//driver.findElement(By.xpath("//*[@id=\"shovlStateHeader\"]/div[1]/span[2]/a/span")).click();
 		
@@ -32,6 +34,7 @@ public class AmazonOp {
 		Thread.sleep(5000);
 		driver.findElement(By.cssSelector("#add-to-cart-button")).click();
 		System.out.println(driver.getTitle());
-		}
+		driver.close();		
+}
 
 }
